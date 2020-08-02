@@ -10,9 +10,10 @@ namespace TelegramModerator
         static TelegramBotClient bot;
         static void Main(string[] args)
         {
-            bot = new TelegramBotClient("");
+            bot = new TelegramBotClient("Enter key");//<<<<<<
             bot.OnMessage += OnMessage;
             bot.StartReceiving();
+            Console.ReadKey();
         }
 
         private static void OnMessage(object sender, MessageEventArgs e)
