@@ -12,6 +12,7 @@ namespace TelegramModerator
         {
             bot = new TelegramBotClient("");
             bot.OnMessage += OnMessage;
+            bot.StartReceiving();
         }
 
         private static void OnMessage(object sender, MessageEventArgs e)
